@@ -18,7 +18,7 @@ for a, b in test_cases:
     result = safe_print_division(a, b)
 
     if result is not None:
-        print("Inside result: {:.1f}" .format(result))   
+        print("Inside result: {}" .format(result))   
     else:
          print("Inside result: None")
         
