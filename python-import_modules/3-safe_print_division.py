@@ -8,7 +8,7 @@ def safe_print_division(a, b):
         return result
 test_cases = [
         (10, 2),
-        (10, -2)
+        
        
     ]
 for a, b in test_cases:
