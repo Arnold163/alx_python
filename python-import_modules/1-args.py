@@ -9,7 +9,8 @@ else:
     print("{} arguments:" .format(num_args))
 
 for i in range(1, num_args + 1):
-    print("{}: {}" .format(i, sys.argv[i]))
+    print("{}: {}" .format(i, sys.argv[i]), end="")
+    print()
 
 ["__main__"]
 ["__name__"]
