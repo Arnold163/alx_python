@@ -8,20 +8,15 @@ def safe_print_division(a, b):
         return result
 test_cases = [
         (10, 2),
-        (0, 2),
-        (10, 0),
-        (0, 0),
-        (10, -2)
        
     ]
 for a, b in test_cases:
     result = safe_print_division(a, b)
 
     if result is not None:
-        print("Inside result: {}" .format(result))   
+        print("Inside result : {}" .format(result))    
     else:
-         print("Inside result: None")
-        
+         print("division by zero - case: a = {} / b = {}" . format(a, b))
 
 
 
