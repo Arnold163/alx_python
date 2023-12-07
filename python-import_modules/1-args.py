@@ -6,7 +6,7 @@ if num_args == 0:
 elif num_args == 1:
     print("1 argument:")
 else: 
-    print("{} argument:" .format(num_args))
+    print("{} arguments:" .format(num_args))
 
 for i in range(1, num_args + 1):
     print("{}: {}" .format(i, sys.argv[i]), end="")
