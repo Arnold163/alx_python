@@ -8,6 +8,10 @@ def safe_print_division(a, b):
         return result
 test_cases = [
         (10, 2),
+        (0, 2),
+        (10, 0),
+        (0, 0),
+        (10, -2)
        
     ]
 for a, b in test_cases:
