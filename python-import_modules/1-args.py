@@ -10,3 +10,6 @@ else:
 
 for i in range(1, num_args + 1):
     print("{}: {}" .format(i, sys.argv[i]))
+
+["__main__"]
+["__name__"]
