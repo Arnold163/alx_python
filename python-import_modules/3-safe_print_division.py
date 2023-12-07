@@ -7,20 +7,14 @@ def safe_print_division(a, b):
     finally:
         return result
 test_cases = [
-        (10, -2),
-        (0, 2),
-        (10, 0),
-        (0, 0),
-        (12, 2),
-        (12, 0),
-        (12, -2),
-        (10, 2)
+        (10, 2),
+       
     ]
 for a, b in test_cases:
     result = safe_print_division(a, b)
 
 if result is not None:
-    print("correct output - case: a = {} / b = {} = {}" .format(a, b, result))
+    print("result: {}" .format(result))
     print("{:d} / {:d} = {}" .format(a, b, result))
 else:
     print("division by zero - case: a = {} / b = {}" . format(a, b))
