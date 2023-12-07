@@ -18,11 +18,10 @@ for a, b in test_cases:
     result = safe_print_division(a, b)
 
     if result is not None:
-        print("Inside result: {:.1f}" .format(result))  
-        print("{:d} / {:d} = {:.1f}" .format(a, b, result))  
+        print("Inside result: {:.1f}" .format(result))   
     else:
          print("Inside result: None")
-         print("division by zero - case: a = {} / b = {}" . format(a, b))
+        
 
 
 
