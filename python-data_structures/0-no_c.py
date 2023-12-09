@@ -1,5 +1,5 @@
 def no_c(my_string):
-    filtered_chars = [char for char in my_string if char.lower() not in ('c' 'C')]
+    filtered_chars = [char for char in my_string if char.lower() !='c']
     result = '' .join(filtered_chars)
     return result
 
