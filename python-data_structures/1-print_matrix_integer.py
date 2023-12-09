@@ -8,7 +8,8 @@ def print_matrix_integer(matrix=[[]]):
             else:
                 print("{:d}" .format(num))
 
-    print(end="")           
+    if row !=matrix[1]:
+        print(end="")           
 
 if __name__ == "__main__":
     matrix = [
