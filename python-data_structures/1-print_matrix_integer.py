@@ -6,10 +6,10 @@ def print_matrix_integer(matrix=[[]]):
             if i <len(row) - 1:
                 print("{:d} " .format(num), end="")
             else:
-                print("{:d}" .format(num), end="")
+                print("{:d}" .format(num))
 
     if row !=matrix[-1]:
-        print(end=" ")           
+        print(end="")           
 
 if __name__ == "__main__":
     matrix = [
