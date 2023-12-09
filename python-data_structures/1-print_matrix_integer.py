@@ -9,16 +9,10 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d}" .format(num))
 
     if row !=matrix[-1]:
-        print(end="")           
+        print(end=" ")           
 
 if __name__ == "__main__":
-    matrix = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
-    ]
+    matrix = [[]]
 
-    print_matrix_integer(matrix)
-    print("--")
     print_matrix_integer()
 
