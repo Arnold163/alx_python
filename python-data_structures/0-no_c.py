@@ -3,8 +3,11 @@ def no_c(my_string):
     result = '' .join(filtered_chars)
     return result
 
-print(no_c("Holberton School"))
+word = "School"
+new_word = no_c(word)
+
+"""print(no_c("Holberton School"))
 print(no_c("Chicago"))
-print(no_c("C is Fun"))
+print(no_c("C is Fun"))"""
 
 
