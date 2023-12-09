@@ -8,7 +8,7 @@ def print_matrix_integer(matrix=[[]]):
             else:
                 print("{:d}" .format(num))
 
-    if row !=matrix[1]:
+    if row !=matrix[-1]:
         print(end="")           
 
 if __name__ == "__main__":
