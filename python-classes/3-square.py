@@ -21,7 +21,26 @@ class Square:
     def area(self):
         return self.__size ** 2   
     
-try:
+if __name__ == "__main__":
+    my_square = Square(89)
+    print("Area: {} for size: {}" .format(my_square.area(), my_square.size))
+
+    my_square.size = 3
+    print("Area: {} for size: {}" .format(my_square.area(), my_square.size))
+
+    try:
+        my_square.size = "5 feet"
+        print("Area: {} for size: {}" .format(my_square.area(), my_square.size))
+    except Exception as e:
+        print(e)
+
+
+
+
+
+
+    
+"""try:
     my_square_1 = Square("invalid")
 except Exception as e:
         pass
@@ -45,6 +64,6 @@ try:
     print(my_square_4.size)
     print(my_square_4.area())
 except Exception as e:
-    pass
+    pass"""
 
      
