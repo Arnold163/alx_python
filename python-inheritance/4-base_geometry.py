@@ -6,10 +6,10 @@ class BaseGeometry:
     
     """the code below"""
 BaseGeometry = __import__('4-base_geometry').BaseGeometry
-
-"""bg = BaseGeometry()
+""" this is not easy"""
+bg = BaseGeometry()
 
 try:
     print(bg.area())
 except Exception as e:
-    print("[{}] {}" .format(e.__class__.__name__, e))"""
+    print("[{}] {}" .format(e.__class__.__name__, e))
