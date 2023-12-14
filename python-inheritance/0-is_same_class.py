@@ -4,7 +4,7 @@ def is_same_class(obj, a_class):
 
 a = 1 
 result = is_same_class(a, int)
-print(result)
+print(str(result).lower())
 
 """if is_same_class(a, int):
     print("{} is an instance of the class {}" .format(a, int.__name__))
