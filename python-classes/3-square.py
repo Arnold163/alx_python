@@ -2,8 +2,8 @@ class Square:
     def __init__(self, size=0):
         try:
             self.size = size
-        except Exception as e:
-            print(e)
+        except (TypeError, ValueError):
+            pass
 
     @property
     def size(self):
