@@ -1,4 +1,4 @@
-class Square:
+"""class Square:
     def __init__(self, size=0):
         try:
             self.size = size
@@ -59,4 +59,4 @@ except Exception as e:
 #new_word = no_c(word)
 
 #print(new_word)
-#print(word)
+#print(word)"""
