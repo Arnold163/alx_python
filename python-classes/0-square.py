@@ -2,7 +2,7 @@ class Square:
     def __init__(self, size):
         self.__size = size
 
-Square = __import__('0-square').Square
+#Square = __import__('0-square').Square
 
 my_square = Square(3)
 print(type(my_square))
