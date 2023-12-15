@@ -1,3 +1,4 @@
+"""this stuff is not easy i have less time aargh"""
 class Square:
     def __init__(self, size):
         self.__size = size
