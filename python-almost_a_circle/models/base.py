@@ -1,3 +1,4 @@
+""" wi this make it an enough comment slash documantation"""
 class Base:
     """
     Class Base: the class for managing id attribute in other
@@ -20,6 +21,8 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+        """thia is where it will output tye output"""
 
 if __name__ == "__main__":
     b1 = Base()
