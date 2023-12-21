@@ -48,13 +48,13 @@ def size(self, value):
 
 
 
-    def __str__(self):
-        """
-        returns a string represantation of the square.
+def __str__(self):
+    """
+    returns a string represantation of the square.
 
-        returns:
-            str: [square] (<id>) <x>/<y> - <size>
-        """
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+     returns:
+        str: [square] (<id>) <x>/<y> - <size>
+     """
+    return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     
