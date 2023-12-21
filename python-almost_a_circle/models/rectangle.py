@@ -174,6 +174,13 @@ class Rectangle(Base):
             self.x = Args[3]
         if len(Args) >= 5:
             self.y = Args[4]
+
+#usage 
+r = Rectangle(1, 2, 3, 4, 5)
+print(r) 
+
+r.update(10, 20, 30, 40, 50)
+print(r)
         
             
     
