@@ -168,6 +168,13 @@ class Rectangle(Base):
     this is an update of the function below, it really needs a long comment to make it work, so that you understand the code, its good practice
     """
     def update(self, *Args):
+
+        """
+        Update the Rectangle attributes.
+
+        Args:
+            *args: Variable number of arguments in the order (id, width, height, x, y).
+        """
         if len(Args) >= 1:
             self.id = Args[0]
         if len(Args) >= 2:
