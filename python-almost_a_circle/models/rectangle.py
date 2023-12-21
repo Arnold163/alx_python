@@ -163,6 +163,10 @@ class Rectangle(Base):
         """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
     
+
+    """
+    this is an update of the function below, it really needs a long comment to make it work, so that you understand the code, its good practice
+    """
     def update(self, *Args):
         if len(Args) >= 1:
             self.id = Args[0]
@@ -175,13 +179,13 @@ class Rectangle(Base):
         if len(Args) >= 5:
             self.y = Args[4]
 
-"""example of isage """
+"""example of isage  same here good manners"""
 r = Rectangle(1, 2, 3, 4, 5)
 print(r) #before update
 
 r.update(10, 20, 30, 40, 50)
 print(r)
-"""after update"""
+"""after update and here too i hope it passes this time"""
         
             
     
