@@ -1,4 +1,4 @@
-#models rectangle, lets see how this code goes
+"""models rectangle, lets see how this code goes"""
 from models.base import Base
 
 class Rectangle(Base):
