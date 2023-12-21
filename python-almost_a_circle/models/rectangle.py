@@ -167,13 +167,13 @@ class Rectangle(Base):
         if len(Args) >= 1:
             self.id = Args[0]
         if len(Args) >= 2:
-            self.id = Args[1]
+            self.width = Args[1]
         if len(Args) >= 3:
-            self.id = Args[2]
+            self.height = Args[2]
         if len(Args) >= 4:
-            self.id = Args[3]
+            self.x = Args[3]
         if len(Args) >= 5:
-            self.id = Args[4]
+            self.y = Args[4]
         
             
     
