@@ -1,4 +1,4 @@
-#time for square now
+"""time for square now"""
 from models.rectangle import Rectangle
 class Square(Rectangle):
     """
