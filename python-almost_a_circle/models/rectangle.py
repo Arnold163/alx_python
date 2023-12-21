@@ -1,5 +1,5 @@
 """models rectangle, lets see how this code goes"""
-from base import Base
+from models.base import Base
 
 class Rectangle(Base):
 
