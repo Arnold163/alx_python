@@ -78,28 +78,29 @@ class Rectangle(Base):
 
     @property
     def y(self):
-       """
-       getter for the y attri.
+        """
+        Getter for y attribute.
 
-       return:
-            int: the y-coordinate of the rectangle.
-       """
-       return self.__y
+        Returns:
+            int: The y-coordinate of the rectangle.
+        """
+        return self.__y
     
     @y.setter
     def y(self, value):
         """
-        setter for y attri
+        Setter for y attribute.
 
         Args:
-            value (int): the y-coordinate to set.
+            value (int): The y-coordinate to set.
 
-        raises:
-            valueError: if value is not an integer.
+        Raises:
+            ValueError: If value is not an integer.
         """
-
         if not isinstance(value, int):
-          raise ValueError("y must be an integer")
+            raise ValueError("y must be an integer")
+        if value <= 0:
+           raise ValueError("y must be > 0")
         self.__y = value
 
 
