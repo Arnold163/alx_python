@@ -23,6 +23,6 @@ class Square(Rectangle):
         returns:
             str: [square] (<id>) <x>/<y> - <size>
         """
-        return f"[square] ({self.id}) {self.x}/{self.y} - {self.size}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     
