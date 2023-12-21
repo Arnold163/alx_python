@@ -175,12 +175,12 @@ class Rectangle(Base):
         if len(Args) >= 5:
             self.y = Args[4]
 
-#usage 
+#example of isage 
 r = Rectangle(1, 2, 3, 4, 5)
-print(r) 
+print(r) #before update
 
 r.update(10, 20, 30, 40, 50)
-print(r)
+print(r) #after update
         
             
     
