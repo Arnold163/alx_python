@@ -55,6 +55,33 @@ class Rectangle(Base):
        self.__height = value
 
     @property
+    def width(self):
+        """
+        Getter for the width attribute.
+
+        Returns:
+            int: The width of the rectangle.
+        """
+        return self.__width
+    
+    @width.setter
+    def width(self, value):
+        """
+        Setter for the width attribute.
+
+        Args:
+            value (int): The width to set.
+
+        Raises:
+            ValueError: If value is not an int greater than 0.
+        """
+        if not isinstance(value, int):
+            raise ValueError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+
+    @property
     def x(self):
        """
        getter for x attri
