@@ -15,37 +15,6 @@ class Square(Rectangle):
             id (int): The id of the square (default is None).
         """
         super().__init__(size, size, x, y, id)
-    
-@property
-def size(self):
-    """
-    Getter for the size attribute.
-
-    Returns:
-        int: The size of the square.
-    """
-    return self.width
-
-@size.setter
-def size(self, value):
-    """
-    Setter for the size attribute.
-
-    Args:
-        value (int): The size to set.
-
-    Raises:
-        TypeError: If value is not an int.
-        ValueError: If value is not an int greater than 0.
-    """
-    if not isinstance(value, int):
-        raise TypeError("size must be an integer")
-    if value <= 0:
-        raise ValueError("size must be > 0")
-    self.width = value
-    self.height = value
-
-
 
 
 def __str__(self):
