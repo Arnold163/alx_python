@@ -163,6 +163,20 @@ class Rectangle(Base):
         """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
     
+    def update(self, *Args):
+        if len(Args) >= 1:
+            self.id = Args[0]
+        if len(Args) >= 2:
+            self.id = Args[1]
+        if len(Args) >= 3:
+            self.id = Args[2]
+        if len(Args) >= 4:
+            self.id = Args[3]
+        if len(Args) >= 5:
+            self.id = Args[4]
+        
+            
+    
 
 
 
