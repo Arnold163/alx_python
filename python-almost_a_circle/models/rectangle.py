@@ -124,12 +124,14 @@ class Rectangle(Base):
             value (int): The y-coordinate to set.
 
         Raises:
+            TypeError: if value is not an int.
             ValueError: If value is not an integer.
+            
         """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
-           raise ValueError("y must be > 0")
+           raise ValueError("y must be >= 0")
         self.__y = value
 
 
