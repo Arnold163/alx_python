@@ -11,7 +11,7 @@ def fetch_and_display_request_id(url):
         if request_id:
             print(f"{request_id}")
         else:
-            print("X-Request-Id not found in the response headers.")
+            print("")
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching the URL: {e}")
