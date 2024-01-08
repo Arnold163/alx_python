@@ -7,10 +7,11 @@ try:
     response.raise_for_status() # Raise an exception for HTTP errors 
 
     # displaying the response 
-    print("-" * 50)
     print("Body response:")
     print("\t- type:" , type(response.text))
     print("\t- content:" , response.text)
+    print(f"n({len(response.text)} chars long)")
+
 
 except requests.exceptions.RequestException as e:
     print(f"Error fetching the URL: {e}")
