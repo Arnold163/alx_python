@@ -10,7 +10,7 @@ try:
     print("Body response:")
     print("\t- type:" , type(response.text))
     print("\t- content:" , response.text)
-    print(f"n({len(response.text)} chars long)")
+
 
 
 except requests.exceptions.RequestException as e:
