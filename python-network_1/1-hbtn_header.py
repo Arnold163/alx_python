@@ -9,7 +9,7 @@ def fetch_and_display_request_id(url):
         #Display the value of X-Request-Id in the response header 
         request_id = response.headers.get('X-Request-Id')
         if request_id:
-            print(f" {request_id}")
+            print(f"{request_id}")
         else:
             print("X-Request-Id not found in the response headers.")
 
