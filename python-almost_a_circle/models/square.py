@@ -48,6 +48,7 @@ class Square(Rectangle):
     def __str__(self):
         """
         returns a string representation of the square.
+        
 
         returns:
             str: [Square] (<id>) <x>/<y> - <size>
