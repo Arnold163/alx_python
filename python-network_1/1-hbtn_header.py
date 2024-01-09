@@ -15,7 +15,7 @@ def fetch_and_display_request_id(url):
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching the URL: {e}")
-        return None
+
 
 if __name__ == "__main__":
     #check if url is provided as a command line argument
