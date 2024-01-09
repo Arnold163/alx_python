@@ -12,7 +12,6 @@ def fetch_and_display_request_id(url):
             print(f"{request_id}")
         else:
             print("")
-            return None
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching the URL: {e}")
