@@ -10,11 +10,14 @@ def fetch_and_display_request_id(url):
         request_id = response.headers.get('X-Request-Id')
         if request_id:
             print(f"{request_id}")
+            return request_id
         else:
             print("")
+            return None
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching the URL: {e}")
+        return None
 
 
 if __name__ == "__main__":
