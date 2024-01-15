@@ -1,7 +1,7 @@
 import requests
 import sys
 
-def fetch_and_display_body(url)
+def fetch_and_display_body(url):
     try:
         response = requests.get(url)
         #display the body of the response 
@@ -22,4 +22,3 @@ if __name__== "__main__":
 
     url = sys.argv[1]
     fetch_and_display_body(url)
-    
