@@ -25,4 +25,5 @@ if __name__ == "__main__":
         sys.exit(1)
     
     url = sys.argv[1]
-    get_request_id(url)
+    result = fetch_and_display_request_id(url)
+    print(result)
