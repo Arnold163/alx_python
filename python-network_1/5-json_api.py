@@ -15,14 +15,12 @@ def search_user_by_letter(letter):
 
         #check if the response is properly JSON formatted and not empty
         if isinstance(json_response, dict) and json_response:
-            user_id = json_response.get('id', '')
-            user_name = json_response.get('name', '')
-            print(f"[{user_id}] {user_name}")
+            print(f"[{json_response.get('id', '')}] {json_response.get('name', '')}")
         else:
             if not json_response:
                 print("No result")
             else:
-                print("not a valid JSON")
+                print("Not a valid JSON")
 
     except requests.RequestException as e:
         print(f"Error: {e}")
