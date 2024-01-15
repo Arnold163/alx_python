@@ -26,4 +26,4 @@ if __name__ == "__main__":
     
     url = sys.argv[1]
     result = fetch_and_display_request_id(url)
-    print(result)
+    
