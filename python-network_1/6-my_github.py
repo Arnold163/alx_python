@@ -26,6 +26,7 @@ def get_github_user_id(username, password):
             print(f"Github User ID: {user_id}")
         else:
             print(f"Failed to retrieve user data. Status code: {response.status_code}")
+            print(response.text)  # Print additional details for debugging
     except requests.RequestException as e:
         print(f"Request failed: {e}")
 
