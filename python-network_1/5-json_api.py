@@ -1,6 +1,5 @@
 import requests
 import sys
-import json
 
 def search_user_by_letter(letter):
     try:
