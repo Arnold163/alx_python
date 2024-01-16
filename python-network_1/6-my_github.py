@@ -7,7 +7,7 @@ def get_github_user_id(username, password):
 
     #prepare the authentication header using basic authentication
     auth_header = f"{username} : {password}"
-    encoded_auth_header = "Basic " + (auth_header.encode('utf-8').b64encode()).decode('utf-8')
+    encoded_auth_header = "Basic " + (auth_header.encode('utf-8').decode('latin-1').encode('base64')).strip()
 
     #set up the request headers
     headers = {
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python script.py <github_username> <github_password>")
         sys.exit(1)
-        
+
     # Get GitHub credentials from command line arguments
     github_username = sys.argv[1]
     github_password = sys.argv[2]
