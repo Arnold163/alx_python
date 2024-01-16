@@ -1,5 +1,6 @@
 import requests
 import sys
+import json
 
 def search_user_by_letter(letter):
     try:
@@ -10,17 +11,20 @@ def search_user_by_letter(letter):
         response = requests.post('http://0.0.0.0:5000/search_user', data=data)
         response.raise_for_status() #Check for HTTP errors 
 
-        #parse the JSON response 
-        json_response = response.json()
+        try:
+            #parse the JSON response 
+            json_response = response.json()
 
-        #check if the response is properly JSON formatted and not empty
-        if isinstance(json_response, dict) and json_response:
-            print(f"[{json_response.get('id', '')}] {json_response.get('name', '')}")
-        else:
-            if not json_response:
-                print("No result")
+             #check if the response is properly JSON formatted and not empty
+            if isinstance(json_response, dict) and json_response:
+                 print(f"[{json_response.get('id', '')}] {json_response.get('name', '')}")
             else:
-                print("Not a valid JSON")
+                 if not json_response:
+                     print("No result")
+                 else:
+                    print("Not a valid JSON")
+        except json.JSONDecodeError:
+            print("Not a valid JSON")
 
     except requests.RequestException as e:
         print(f"Error: {e}")
