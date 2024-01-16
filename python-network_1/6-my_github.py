@@ -21,9 +21,14 @@ def get_github_user_id(username, password):
 
         # Check if the request was successful (status code 200)
         if response.status_code == 200:
-            user_data = response.json()
-            user_id = user_data['id']
-            print(f"Github User ID: {user_id}")
+            try:
+                # Try to parse the response as JSON
+                user_data = response.json()
+                user_id = user_data['id']
+                print(f"Github User ID: {user_id}")
+            except ValueError:
+                # Handle the case where the response is not JSON
+                print(f"Non-JSON response: {response.text}")
         else:
             print(f"Failed to retrieve user data. Status code: {response.status_code}")
             print(response.text)  # Print additional details for debugging
