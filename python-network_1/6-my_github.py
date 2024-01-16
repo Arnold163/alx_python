@@ -1,43 +1,39 @@
 import requests
 import sys
 
-def get_github_user_id(username, password):
-    #GitHub API endpoint for the authenticated user
+def get_github_user_id(username, token):
+    # GitHub API endpoint for the authenticated user
     api_url = 'https://api.github.com/user'
 
-    #prepare the authentication header using basic authentication
-    auth_header = f"{username} : {password}"
+    # Prepare the authentication header using Basic Authentication with personal access token
+    auth_header = f"{username}:{token}"
     encoded_auth_header = "Basic " + (auth_header.encode('utf-8').decode('latin-1').encode('base64')).strip()
 
-    #set up the request headers
+    # Set up the request headers
     headers = {
         'Authorization': encoded_auth_header,
         'Accept': 'application/vnd.github.v3+json'
     }
 
     try:
-        #make a GET request to the Github API
+        # Make a GET request to the GitHub API
         response = requests.get(api_url, headers=headers)
 
-        #Check if the request was successful (status code 200)
+        # Check if the request was successful (status code 200)
         if response.status_code == 200:
             user_data = response.json()
             user_id = user_data['id']
-            print(f"Github User ID: {user_id}")
+            print(user_id)
         else:
-            print(f"Failed to retrieve user data. Status code: {response.status_code}")
+            print("None")
+
     except requests.RequestException as e:
         print(f"Request failed: {e}")
-        
-if __name__ == "__main__":
-    # Check if the expected number of command-line arguments is provided
-    if len(sys.argv) != 3:
-        print("Usage: python script.py <github_username> <github_password>")
-        sys.exit(1)
 
+if __name__ == "__main__":
     # Get GitHub credentials from command line arguments
     github_username = sys.argv[1]
-    github_password = sys.argv[2]
+    github_token = sys.argv[2]
 
     # Call the function to get and display GitHub user ID
-    get_github_user_id(github_username, github_password)
+    get_github_user_id(github_username, github_token)
