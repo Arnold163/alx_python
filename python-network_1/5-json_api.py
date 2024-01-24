@@ -33,4 +33,4 @@ if __name__ == "__main__":
     else:
         letter = ""
 
-    search_user_by_letter(letter)      
+    search_user_by_letter(letter )      
