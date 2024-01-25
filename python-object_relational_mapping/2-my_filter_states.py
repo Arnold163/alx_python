@@ -22,9 +22,8 @@ if __name__ == "__main__":
     query = "SELECT * FROM states WHERE LOWER(name) = LOWER( '{}' ) ORDER BY states.id ASC".format(state_name)
     cursor.execute(query)
     data = cursor.fetchall()
-    row = cursor.fetchone()
 
-    if row:
+    for row in data:
         print(row)
 
     cursor.close()
