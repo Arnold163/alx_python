@@ -9,6 +9,7 @@ if __name__ == "__main__":
 
     username, password, database = argv[1], argv[2], argv[3]
 
+try:
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -26,5 +27,9 @@ if __name__ == "__main__":
     for row in data:
         print(row)
 
+except MySQLdb.Error as e:
+        print(f"Error: {e}")
+
+finally:
     cursor.close()
     db.close()
