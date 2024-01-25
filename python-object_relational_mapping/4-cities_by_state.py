@@ -2,7 +2,7 @@
 import MySQLdb
 from sys import argv
 
-if __name__ == "__main__":
+if __name__ == "__name__":
     if len(argv) != 5:
         print("usage: {}<username> <password> <database> <state_name>".format(argv[0]))
         exit(1)
@@ -21,7 +21,6 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM cities ORDER BY cities.id ASC")
 
     data = cursor.fetchall()
-
 
     for row in data:
         print(row)
