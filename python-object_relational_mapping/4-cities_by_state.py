@@ -1,12 +1,14 @@
 #sql injection lets inject this
 import MySQLdb
-from sys import argv
+import sys
 
-if __name__ == "__name__":
-    if len(argv) != 5:
-        print("usage: {}<username> <password> <database> <state_name>".format(argv[0]))
-        exit(1)
-    username, password, database, state_name = argv[1], argv[2], argv[3], argv[4]
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("usage: {} username password database".format(sys.argv[0]))
+        sys.exit(1)
+
+    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+    
 
     db = MySQLdb.connect(
         host="localhost",
@@ -17,12 +19,18 @@ if __name__ == "__name__":
     )
 
     cursor = db.cursor()
+    query ="""
+    SELECT cities.id, cities.name, states.name
+    FROM cities
+    JOIN states ON cities.state_id =states.id
+    ORDER BY cities.id;
+    """
 
-    cursor.execute("SELECT * FROM cities ORDER BY cities.id ASC")
+    cursor.execute(query)
 
-    data = cursor.fetchall()
+    results = cursor.fetchall()
 
-    for row in data:
+    for row in results:
         print(row)
 
     cursor.close()
