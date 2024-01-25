@@ -25,7 +25,9 @@ try:
     data = cursor.fetchall()
 
     for row in data:
-        print(row)
+        if row[1].startswith('N'):
+         print(row)
+
 
 except MySQLdb.Error as e:
         print(f"Error: {e}")
