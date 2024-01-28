@@ -7,6 +7,7 @@ app = Flask(__name__)
 #define and use strict
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
+    #what else am i to document here
     return 'Hello HBNB!'
 #run the flask app if script is executed 
 if __name__ == '__main__':
