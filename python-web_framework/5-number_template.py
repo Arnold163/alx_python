@@ -32,7 +32,7 @@ def python_text(text='is cool'):
 #route for numbers
 @app.route('/number/<int:n>', strict_slashes=False)
 def is_number(n):
-    return '{} is a number'.format
+    return '{} is a number'.format(n)
 
 #route for template
 @app.route('/number_template/<int:n>', strict_slashes=False)
