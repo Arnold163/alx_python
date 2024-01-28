@@ -12,6 +12,8 @@ def hello_hbnb():
     return 'Hello HBNB!'
 #run the flask app if script is executed 
 """ maybe this type of documantation?"""
+
+@app.route('/hbnb', strict_slashes=False)
 def hbnb():
     return 'HBNB'
 if __name__ == '__main__':
