@@ -21,9 +21,9 @@ if len(sys.argv) != 4:
     db = sqlalchemy(app)
 
     class User(db.Model):
-        id =db.Column(db.integer, primary_key=True)
+        id =db.Column(db.Integer, primary_key=True)
         name = db.Column(db.String(256))
-        email = db.Column(db.String(256)), unique=True, nullable=False
+        email = db.Column(db.String(256), unique=True, nullable=False)
 
     def create_table():
         with app.app_context():
