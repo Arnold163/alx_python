@@ -16,6 +16,7 @@ if len(sys.argv) != 4:
     app = Flask(__name__)
 
     app.config['SQLALCHEMY_DATABASE_URL'] = f"mysql://{db_username}:{db_password}@{db_host}/{db_name}"
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     db = sqlalchemy(app)
 
