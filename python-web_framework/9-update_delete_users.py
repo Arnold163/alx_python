@@ -83,7 +83,7 @@ if len(sys.argv) != 4:
     
     if request.method == 'POST':
         try:
-            db.session.delete_user(User)
+            db.session.delete_user(user)
             db.session.commit()
             flash("User deleted successfully", "success")
         except Exception as e:
