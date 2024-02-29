@@ -48,4 +48,5 @@ if __name__ == "__main__":
         print("Usage: python script.py <employee_id>")
         sys.exit(1)
     employee_id = sys.argv[1]
-    fetch_todo_list_progress(employee_id)
+    num_tasks = fetch_todo_list_progress(employee_id)
+    print(f"Number of tasks in CSV: {num_tasks}")
