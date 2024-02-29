@@ -1,6 +1,6 @@
+import csv
 import requests
-import sys
-import csv 
+import sys 
 
 def fetch_todo_list_progress(employee_id):
     # Fetching employee details
