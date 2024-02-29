@@ -32,6 +32,9 @@ def fetch_todo_list_progress(employee_id):
 
     print(f"Data exported to {csv_filename}")
 
+    # Return the number of tasks in the CSV file
+    return len(todo_data)
+
 
     # Printing employee todo list progress
     #print(
