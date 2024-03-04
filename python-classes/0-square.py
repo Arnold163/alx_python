@@ -4,7 +4,7 @@ class Square:
         self.__size = size
 
 my_square = Square(3)
-print(type(my_square), end=" ")
+print(type(my_square), end="")
 print()
 
 
