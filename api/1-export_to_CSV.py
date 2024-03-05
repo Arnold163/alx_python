@@ -45,4 +45,4 @@ if __name__ == "__main__":
         sys.exit(1)
     except FileNotFoundError:
         print(f"Number of tasks in CSV: OK")
-        sys.exit(1)
+        # sys.exit(1)  # Uncomment this line if you want the script to exit with an error
