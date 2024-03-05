@@ -17,6 +17,12 @@ def fetch_todo_list_progress(employee_id):
     # Fetching employee details
     employee_response = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{employee_id}")
+    
+    # Check if the user ID is valid
+    if employee_response.status_code != 200:
+        print("Invalid USER_ID. Please provide a valid employee ID.")
+        sys.exit(1)
+
     employee_data = employee_response.json()
     employee_name = employee_data['name']
 
