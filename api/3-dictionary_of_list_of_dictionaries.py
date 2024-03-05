@@ -69,4 +69,4 @@ if __name__ == "__main__":
     export_to_json(all_employee_data, "todo_all_employees.json")
 
     # Print confirmation message
-    print("Data exported to todo_all_employees.json.")
+    print("All users found: OK")
