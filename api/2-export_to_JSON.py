@@ -1,7 +1,7 @@
 """export to JSON""" 
+import json
 import requests
 import sys
-import json
 
 
 def fetch_todo_list_progress(employee_id):
