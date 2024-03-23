@@ -5,7 +5,7 @@ class Square:
 
 my_square = Square(3)
 print(f"<class '{type(my_square).__module__}.{type(my_square).__name__}'>")
-print(vars(my_square))
+#print(vars(my_square))
 
 
 
