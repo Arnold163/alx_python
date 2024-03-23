@@ -1,11 +1,11 @@
 # is this documanted enough man?
 class Square:
-    """
-    A class representing a square.
+    
+## A class representing a square.
 
-    Attributes:
-        __size (int): The size of the square.
-    """
+#Attributes:
+#__size (int): The size of the square.
+
 
     def __init__(self, size=0):
         """
