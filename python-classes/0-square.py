@@ -4,8 +4,8 @@ class Square:
         self.__size = size
 
 my_square = Square(3)
-print(type(my_square), end="")
-print()
+print(f"<class '{type(my_square).__module__}.{type(my_square).__name__}'>")
+print(vars(my_square))
 
 
 
