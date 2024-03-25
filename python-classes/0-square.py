@@ -24,3 +24,6 @@ except AttributeError:
     print("'Square' object has no attribute 'size'")
 print(vars(my_square))
 
+print(f"<class '{type(my_square).__module__}.{type(my_square).__name__}'>")
+print(vars(my_square))
+
