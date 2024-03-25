@@ -1,28 +1,11 @@
-"""export to JSON""" 
-import json
 import requests
 import sys
-
+import json
 
 def fetch_todo_list_progress(employee_id):
-    """
-    Fetches todo list progress for a given employee ID.
-
-    Args:
-        employee_id (int): The ID of the employee.
-
-    Returns:
-        dict: A dictionary containing tasks owned by the employee, formatted as specified.
-    """
     # Fetching employee details
     employee_response = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{employee_id}")
-    
-    # Check if the user ID is valid
-    if employee_response.status_code != 200:
-        print("Invalid USER_ID. Please provide a valid employee ID.")
-        sys.exit(1)
-
     employee_data = employee_response.json()
     employee_name = employee_data['name']
 
@@ -31,48 +14,34 @@ def fetch_todo_list_progress(employee_id):
         f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos")
     todo_data = todo_response.json()
 
-    # Collecting tasks owned by the employee
-    employee_tasks = []
+    # Prepare data in JSON format
+    tasks = []
     for task in todo_data:
-        employee_tasks.append({
-            "task": task['title'],
-            "completed": task['completed'],
+        tasks.append({
+            "task": task["title"],
+            "completed": task["completed"],
             "username": employee_name
         })
 
-    # Returning data
-    return {employee_id: employee_tasks}
+    # Writing data to JSON file
+    with open(f"{employee_id}.json", "w") as json_file:
+        json.dump({employee_id: tasks}, json_file, indent=4)
 
+    # Counting completed tasks
+    completed_tasks = [task for task in todo_data if task['completed']]
+    num_completed_tasks = len(completed_tasks)
+    total_tasks = len(todo_data)
 
-def export_to_json(data, filename):
-    """
-    Exports data to a JSON file.
-
-    Args:
-        data (dict): The data to be exported.
-        filename (str): The name of the file to export data to.
-    """
-    with open(filename, 'w') as file:
-        json.dump(data, file, indent=4)
+    # Printing employee todo list progress
+    print(
+        f"Employee {employee_name}{' '*(9-len(employee_name))} is done with tasks ({num_completed_tasks}/{total_tasks}):")
+    for task in completed_tasks:
+        print(f"\t{task['title']}")
 
 
 if __name__ == "__main__":
-    # Check if the correct number of command-line arguments is provided
     if len(sys.argv) != 2:
         print("Usage: python script.py <employee_id>")
         sys.exit(1)
-
-    # Get the employee ID from command-line argument
     employee_id = sys.argv[1]
-
-    # Fetch todo list progress for the employee
-    data = fetch_todo_list_progress(employee_id)
-
-    # Define the filename for the JSON file
-    filename = f"{employee_id}.json"
-
-    # Export data to JSON file
-    export_to_json(data, filename)
-
-    # Print confirmation message
-    print(f"Data exported to {filename}.")
+    fetch_todo_list_progress(employee_id)
