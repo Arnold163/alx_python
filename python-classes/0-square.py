@@ -1,4 +1,4 @@
-"""square with size"""
+"""square zero"""
 class Square:
     """
     A class representing a square.
@@ -26,4 +26,3 @@ print(vars(my_square))
 
 print(f"<class '{type(my_square).__module__}.{type(my_square).__name__}'>")
 print(vars(my_square))
-
