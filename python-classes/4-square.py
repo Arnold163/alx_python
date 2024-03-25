@@ -8,22 +8,21 @@ class Square:
 
 
     def __init__(self, size=0):
-        """
-        Initializes a Square instance with a specified size.
+       # 
+       # Initializes a Square instance with a specified size.
 
-        Args:
-            size (int): The size of the square (default is 0).
-        """
+       # Args:
+       #    size (int): The size of the square (default is 0).
         self.size = size
 
     @property
     def size(self):
-        """
-        Getter method for the size attribute.
+        
+        #Getter method for the size attribute.
 
-        Returns:
-            int: The size of the square.
-        """
+        #Returns:
+        #    int: The size of the square.
+        
         return self.__size
 
     @size.setter
