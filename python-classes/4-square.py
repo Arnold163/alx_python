@@ -1,4 +1,4 @@
-""" is this documanted enough man?"""
+#is this documanted enough man?
 class Square:
     
 ## A class representing a square.
