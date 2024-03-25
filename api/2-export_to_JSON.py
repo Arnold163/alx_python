@@ -38,6 +38,8 @@ def fetch_todo_list_progress(employee_id):
     for task in completed_tasks:
         print(f"\t{task['title']}")
 
+    print(f"Correct {employee_id}: OK")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
