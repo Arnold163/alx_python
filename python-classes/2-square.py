@@ -32,21 +32,10 @@ class Square:
         """
         return self.__size ** 2
 
-# Example usage
-my_square_1 = Square(3)
-print("Area: {}".format(my_square_1.area()))
+if __name__ == "__main__":
+    # Example usage
+    my_square_1 = Square(3)
+    print(my_square_1.area())
 
-# Attempting to access __size directly raises an AttributeError
-try:
-    print(my_square_1.size)
-except Exception as e:
-    print(e)
-
-# Attempting to access __size directly raises an AttributeError
-try:
-    print(my_square_1.__size)
-except Exception as e:
-    print(e)
-
-my_square_2 = Square(5)
-print("Area: {}".format(my_square_2.area()))
+    my_square_2 = Square(5)
+    print(my_square_2.area())
