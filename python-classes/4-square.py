@@ -1,4 +1,4 @@
-# is this documanted enough man?
+""" is this documanted enough man?"""
 class Square:
     
 ## A class representing a square.
@@ -46,18 +46,18 @@ class Square:
             self.__size = value
 
     def area(self):
-        """
-        Calculates the area of the square.
+        
+       # Calculates the area of the square.
 
-        Returns:
-            int: The area of the square.
-        """
-        return self.__size ** 2
+        #Returns:
+        #    int: The area of the square.
+    
+       # return self.__size ** 2
 
-    def my_print(self):
-        """
-        Prints the square pattern using '#'.
-        """
+     def my_print(self):
+        
+        #Prints the square pattern using '#'.
+        
         if self.__size == 0:
             print()
         else:
